@@ -10,7 +10,7 @@ const Card = ({
   border = false,
   ...props
 }) => {
-  const baseClasses = 'bg-white dark:bg-slate-800 rounded-xl transition-all duration-200';
+  const baseClasses = 'bg-card-gradient rounded-2xl transition-all duration-300 border border-dark-700';
   
   const paddingClasses = {
     none: '',
@@ -22,14 +22,14 @@ const Card = ({
   
   const shadowClasses = {
     none: '',
-    sm: 'shadow-sm',
-    default: 'shadow-md',
-    lg: 'shadow-lg',
-    xl: 'shadow-xl'
+    sm: 'shadow-dark-lg',
+    default: 'shadow-dark-lg',
+    lg: 'shadow-dark-xl',
+    xl: 'shadow-dark-xl'
   };
   
-  const borderClasses = border ? 'border border-slate-200 dark:border-slate-700' : '';
-  const hoverClasses = hover ? 'hover:shadow-lg hover:scale-105 cursor-pointer' : '';
+  const borderClasses = border ? 'border border-dark-600' : '';
+  const hoverClasses = hover ? 'hover:shadow-dark-xl hover:scale-105 hover:shadow-glow cursor-pointer' : '';
   
   const classes = `${baseClasses} ${paddingClasses[padding]} ${shadowClasses[shadow]} ${borderClasses} ${hoverClasses} ${className}`;
   

@@ -32,7 +32,7 @@ const Navbar = () => {
   const isActive = (path) => location.pathname === path;
   
   return (
-    <nav className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-40">
+    <nav className="bg-dark-900/80 backdrop-blur-xl border-b border-dark-700 sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
@@ -45,10 +45,10 @@ const Navbar = () => {
             </button>
             
             <Link to="/" className="flex items-center space-x-2 ml-2 lg:ml-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary-gradient rounded-lg flex items-center justify-center shadow-glow">
                 <span className="text-white font-bold text-sm">CF</span>
               </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-slate-100">
+              <span className="text-xl font-bold text-dark-100">
                 CFO Helper
               </span>
             </Link>
@@ -60,10 +60,10 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(item.href)
-                    ? 'text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-900/20'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700'
+                    ? 'text-primary-400 bg-dark-800 border border-primary-500/20'
+                    : 'text-dark-300 hover:text-dark-100 hover:bg-dark-800'
                 }`}
               >
                 <span>{item.icon}</span>
@@ -77,15 +77,15 @@ const Navbar = () => {
             {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-md text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300 transition-colors"
+              className="p-2 rounded-lg text-dark-300 hover:text-dark-100 hover:bg-dark-800 transition-all duration-200"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
             </button>
             
             {/* Credits widget */}
-            <div className="hidden sm:flex items-center space-x-2 px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full">
-              <CreditCard size={16} className="text-slate-600 dark:text-slate-400" />
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            <div className="hidden sm:flex items-center space-x-2 px-3 py-1 bg-dark-800 border border-dark-600 rounded-full">
+              <CreditCard size={16} className="text-primary-400" />
+              <span className="text-sm font-medium text-dark-100">
                 1,250
               </span>
             </div>

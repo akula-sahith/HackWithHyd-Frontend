@@ -63,23 +63,23 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-900">
+    <div className="min-h-screen bg-dark-950">
       {/* Navigation */}
-      <nav className="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700">
+      <nav className="bg-dark-900/80 backdrop-blur-xl border-b border-dark-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary-gradient rounded-lg flex items-center justify-center shadow-glow">
                 <span className="text-white font-bold text-sm">CF</span>
               </div>
-              <span className="text-xl font-bold text-slate-900 dark:text-slate-100">
+              <span className="text-xl font-bold text-dark-100">
                 CFO Helper
               </span>
             </div>
             <div className="flex items-center space-x-4">
               <Link
                 to="/login"
-                className="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                className="text-dark-300 hover:text-dark-100 transition-colors"
               >
                 Sign In
               </Link>
@@ -98,19 +98,19 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <motion.h1
-              className="text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 mb-6"
+              className="text-5xl md:text-6xl font-bold text-dark-100 mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               Financial Planning
-              <span className="block bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <span className="block glow-text">
                 Made Simple
               </span>
             </motion.h1>
             
             <motion.p
-              className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto"
+              className="text-xl text-dark-300 mb-8 max-w-3xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -141,19 +141,19 @@ const Landing = () => {
         
         {/* Background decoration */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-800">
+      <section className="py-20 bg-dark-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-100 mb-4">
               Everything you need to plan your finances
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-dark-300 max-w-2xl mx-auto">
               From scenario modeling to investor reports, CFO Helper has all the tools you need.
             </p>
           </div>
@@ -186,17 +186,17 @@ const Landing = () => {
       {/* Demo Preview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
-              See it in action
-            </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Interactive financial modeling with real-time updates and beautiful visualizations.
-            </p>
-          </div>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-dark-100 mb-4">
+            See it in action
+          </h2>
+          <p className="text-lg text-dark-300 max-w-2xl mx-auto">
+            Interactive financial modeling with real-time updates and beautiful visualizations.
+          </p>
+        </div>
           
           <motion.div
-            className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl p-8"
+            className="glass-card shadow-2xl p-8"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -207,7 +207,7 @@ const Landing = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-50 dark:bg-slate-800">
+      <section className="py-20 bg-dark-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -218,10 +218,10 @@ const Landing = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-dark-100 mb-2">
                   {stat.value}
                 </div>
-                <div className="text-slate-600 dark:text-slate-400">
+                <div className="text-dark-300">
                   {stat.label}
                 </div>
               </motion.div>
@@ -234,10 +234,10 @@ const Landing = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-100 mb-4">
               Loved by finance teams
             </h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-dark-300 max-w-2xl mx-auto">
               See what our users have to say about CFO Helper.
             </p>
           </div>
@@ -275,7 +275,7 @@ const Landing = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pink-500 to-purple-600">
+      <section className="py-20 bg-primary-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-white mb-4"
@@ -286,7 +286,7 @@ const Landing = () => {
             Ready to get started?
           </motion.h2>
           <motion.p
-            className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto"
+            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -308,50 +308,50 @@ const Landing = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12">
+      <footer className="bg-dark-950 text-dark-100 py-12 border-t border-dark-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary-gradient rounded-lg flex items-center justify-center shadow-glow">
                   <span className="text-white font-bold text-sm">CF</span>
                 </div>
                 <span className="text-xl font-bold">CFO Helper</span>
               </div>
-              <p className="text-slate-400">
+              <p className="text-dark-400">
                 Making financial planning accessible to everyone.
               </p>
             </div>
             
             <div>
               <h3 className="font-semibold mb-4">Product</h3>
-              <ul className="space-y-2 text-slate-400">
-                <li><Link to="/help" className="hover:text-white transition-colors">Help</Link></li>
-                <li><Link to="/integrations" className="hover:text-white transition-colors">Integrations</Link></li>
-                <li><Link to="/admin" className="hover:text-white transition-colors">Admin</Link></li>
+              <ul className="space-y-2 text-dark-400">
+                <li><Link to="/help" className="hover:text-dark-100 transition-colors">Help</Link></li>
+                <li><Link to="/integrations" className="hover:text-dark-100 transition-colors">Integrations</Link></li>
+                <li><Link to="/admin" className="hover:text-dark-100 transition-colors">Admin</Link></li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+              <ul className="space-y-2 text-dark-400">
+                <li><a href="#" className="hover:text-dark-100 transition-colors">About</a></li>
+                <li><a href="#" className="hover:text-dark-100 transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-dark-100 transition-colors">Careers</a></li>
               </ul>
             </div>
             
             <div>
               <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-slate-400">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Security</a></li>
+              <ul className="space-y-2 text-dark-400">
+                <li><a href="#" className="hover:text-dark-100 transition-colors">Privacy</a></li>
+                <li><a href="#" className="hover:text-dark-100 transition-colors">Terms</a></li>
+                <li><a href="#" className="hover:text-dark-100 transition-colors">Security</a></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
+          <div className="border-t border-dark-800 mt-8 pt-8 text-center text-dark-400">
             <p>&copy; 2024 CFO Helper. All rights reserved.</p>
           </div>
         </div>

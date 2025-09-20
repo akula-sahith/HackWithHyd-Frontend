@@ -39,7 +39,7 @@ const Sidebar = () => {
     <>
       {/* Desktop Sidebar */}
       <motion.div
-        className={`hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 lg:pt-16 bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 z-30`}
+        className={`hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 lg:pt-16 bg-dark-900/80 backdrop-blur-xl border-r border-dark-700 z-30`}
         animate={{ width: sidebarOpen ? 256 : 64 }}
         transition={{ duration: 0.2 }}
       >
@@ -52,18 +52,18 @@ const Sidebar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`group flex items-center px-2 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     isActive(item.href)
-                      ? 'bg-pink-100 dark:bg-pink-900/20 text-pink-700 dark:text-pink-300'
-                      : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-slate-100'
+                      ? 'text-primary-400 bg-dark-800 border-l-4 border-primary-500'
+                      : 'text-dark-300 hover:text-dark-100 hover:bg-dark-800'
                   }`}
                 >
                   <Icon
                     size={20}
                     className={`mr-3 flex-shrink-0 ${
                       isActive(item.href)
-                        ? 'text-pink-500 dark:text-pink-400'
-                        : 'text-slate-400 group-hover:text-slate-500 dark:group-hover:text-slate-300'
+                        ? 'text-primary-400'
+                        : 'text-dark-400 group-hover:text-dark-300'
                     }`}
                   />
                   <motion.span

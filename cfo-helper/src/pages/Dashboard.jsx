@@ -131,10 +131,10 @@ const Dashboard = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
+          <h1 className="text-3xl font-bold text-dark-100">
             Dashboard
           </h1>
-          <p className="text-slate-600 dark:text-slate-400 mt-1">
+          <p className="text-dark-300 mt-1">
             Welcome back! Here's your financial overview.
           </p>
         </div>
@@ -203,10 +203,10 @@ const Dashboard = () => {
             <Card className="kpi-chip">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
+                  <p className="text-sm font-medium text-dark-300">
                     {kpi.title}
                   </p>
-                  <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+                  <p className="text-2xl font-bold text-dark-100">
                     {kpi.unit ? `${kpi.value} ${kpi.unit}` : formatCurrency(kpi.value)}
                   </p>
                   <div className="flex items-center mt-1">
@@ -216,13 +216,13 @@ const Dashboard = () => {
                       <TrendingDown className={`w-4 h-4 mr-1 text-red-500`} />
                     )}
                     <span className={`text-sm ${
-                      kpi.trend === 'up' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
+                      kpi.trend === 'up' ? 'text-success-400' : 'text-error-400'
                     }`}>
                       {kpi.change > 0 ? '+' : ''}{kpi.change}%
                     </span>
                   </div>
                 </div>
-                <div className={`p-3 rounded-lg bg-slate-100 dark:bg-slate-700`}>
+                <div className="p-3 rounded-lg bg-dark-800">
                   <kpi.icon className={`w-6 h-6 ${kpi.color}`} />
                 </div>
               </div>

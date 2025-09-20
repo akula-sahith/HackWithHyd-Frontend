@@ -19,9 +19,9 @@ const Button = ({
   const variants = {
     primary: 'btn-primary',
     secondary: 'btn-secondary',
-    danger: 'bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2',
-    ghost: 'bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2',
-    outline: 'border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2'
+    danger: 'bg-error-500 hover:bg-error-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-dark-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-error-500 focus:ring-offset-2 focus:ring-offset-dark-950',
+    ghost: 'btn-ghost',
+    outline: 'btn-outline'
   };
   
   const sizes = {

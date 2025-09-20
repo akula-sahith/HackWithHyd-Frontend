@@ -5,7 +5,7 @@ export const useUIStore = create(
   persist(
     (set, get) => ({
       // Dark mode
-      isDarkMode: false,
+      isDarkMode: true,
       toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
 
       // Modal states

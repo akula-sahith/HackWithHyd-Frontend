@@ -191,10 +191,10 @@ const SimulationStudio = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100">
+          <h1 className="text-3xl font-bold text-dark-100">
             Simulation Studio
           </h1>
-          <p className="text-slate-600 dark:text-slate-400 mt-1">
+          <p className="text-dark-300 mt-1">
             Build and analyze financial scenarios in real-time
           </p>
         </div>
@@ -231,7 +231,7 @@ const SimulationStudio = () => {
         >
           <Card className="h-fit">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
+              <h3 className="text-lg font-semibold text-dark-100">
                 Input Parameters
               </h3>
               <Button
@@ -247,7 +247,7 @@ const SimulationStudio = () => {
             <div className="space-y-6">
               {inputSections.map((section, sectionIndex) => (
                 <div key={sectionIndex}>
-                  <h4 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-4">
+                  <h4 className="text-sm font-medium text-dark-300 mb-4">
                     {section.title}
                   </h4>
                   <div className="space-y-4">
@@ -263,7 +263,7 @@ const SimulationStudio = () => {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <h4 className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-4">
+                  <h4 className="text-sm font-medium text-dark-300 mb-4">
                     Advanced Settings
                   </h4>
                   <div className="space-y-4">
